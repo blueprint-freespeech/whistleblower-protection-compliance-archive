@@ -1,0 +1,1013 @@
+#surveyResults {}
+
+body {
+    margin: 0px;
+    color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+}
+
+.logo {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+.logoimg {
+    max-width: 200px;
+    max-height:109px;
+    display: inline-block;
+}
+.footerlogo {
+    margin: 0 auto;
+    text-align: center;
+    max-height: 60px;
+    display: block;
+}
+.footer {
+    font-family: Verdana, Geneva, sans-serif;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-left:40px;
+    padding-right:40px;
+    box-sizing: border-box;
+    width: 100%;
+    font-size:11.2px;
+    text-align:center;
+    margin-top:30px;
+    background-color: rgb(240,240,240);
+    -webkit-transform: translateY(100%); //if your div is 200px, this will move it down by 200px, if it is 100px it will down by 100px etc
+    transform: translateY(100%);
+}
+.header {
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.title {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    padding-top: 10px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.container {
+    width: 100%;
+    font-family: Verdana, Geneva, sans-serif;
+    padding: 20px;
+}
+
+.rescontainer {
+    padding: 30px;
+}
+
+.hidden {
+    display: none !important
+}
+
+.conditionalhidden {
+    display: none !important
+}
+
+.welcomeDiv {
+    background-color: #F0FFFF;
+    text-align: center;
+}
+
+.welcomeText {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: left;
+    width: 90%;
+}
+
+.finishDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+    background-color: #F0FFFF
+}
+
+.feedbackDiv {
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: #eee;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.feedbackSection {
+    font-size: 10pt;
+}
+
+.articleref {
+    font-style: italic;
+}
+
+.sectionDiv {
+    min-height: 300px;
+    font-family: Verdana, Geneva, sans-serif;
+    padding: 0px;
+}
+
+.questionLinkSelected {
+    display: inline-block;
+    font-family: Verdana, Geneva, sans-serif;
+    padding: 4px;
+    color: #a9daff;
+    background-color: #004f8b;
+    ;
+    margin-left: 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 9pt;
+    box-shadow: inset 0 -2px 1px rgba(255, 255, 255, 0.2), inset 0 3px 2px rgba(0, 0, 0, 0.12);
+}
+
+.questionLink {
+    background-color: #1097ff;
+    display: inline-block;
+    font-family: Verdana, Geneva, sans-serif;
+    padding: 4px;
+    margin-left: 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    font-size: 9pt;
+    color: #003d6b;
+    transition-duration: 0.4s;
+}
+
+.questionLink:hover {
+    color: #a9daff;
+    background-color: #004f8b;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 4px 1px rgba(0, 0, 0, 0.2), inset 0 3px 2px rgba(255, 255, 255, .22), inset 0 -3px 2px rgba(0, 0, 0, .15), inset 0 20px 10px rgba(255, 255, 255, .12);
+}
+
+.questionLinkA {
+    text-decoration: none;
+    color: inherit;
+}
+
+.questionBar {
+    background-color: #a9daff;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    color: #a9daff;
+    text-align: center;
+}
+
+.sectionBar {
+    background-color: #a9daff;
+    color: #003d6b;
+    text-align: center;
+}
+
+.sectionBar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sectionTitle {
+    padding: 10px;
+    display: inline-block;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-color: #a9daff;
+    cursor: pointer;
+    color: #003d6b;
+    background-color: #1097ff;
+    transition-duration: 0.4s;
+}
+
+.sectionTitle:hover {
+    border-color: #003d6b;
+    color: #a9daff;
+    background-color: #004f8b;
+    /*box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 2px rgba(0, 0, 0, 0.3), 0 0 4px 1px rgba(0, 0, 0, 0.2), inset 0 3px 2px rgba(255, 255, 255, .22), inset 0 -3px 2px rgba(0, 0, 0, .15), inset 0 20px 10px rgba(255, 255, 255, .12), 0 0 4px 1px rgba(0, 0, 0, .1), 0 3px 2px rgba(0, 0, 0, .2);*/
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 4px 1px rgba(0, 0, 0, 0.2), inset 0 3px 2px rgba(255, 255, 255, .22), inset 0 -3px 2px rgba(0, 0, 0, .15), inset 0 20px 10px rgba(255, 255, 255, .12);
+}
+
+.sectionTitle:last-child {
+    border-right-width: 1px;
+    border-right-style: solid;
+}
+
+.sectionTitleSelected {
+    background-color: #004f8b;
+    color: #a9daff!important;
+    border-color: #003d6b;
+    padding: 10px;
+    display: inline-block;
+    color-adjust: exact;
+    box-shadow: inset 0 -2px 1px rgba(255, 255, 255, 0.2), inset 0 3px 2px rgba(0, 0, 0, 0.12);
+}
+
+.questionText {
+    padding: 10px;
+    margin-left: 30px;
+}
+
+.answerLabel {
+    cursor: pointer;
+}
+
+.answer {
+    cursor: pointer
+}
+
+.questionDiv {
+    font-family: Verdana, Geneva, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    background-color: #F0FFFF;
+    color: #222
+}
+
+.answersDiv {
+    padding-left: 30px
+}
+
+.answerDiv {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 30px;
+    padding-left: 3px;
+    pointer-events: none;
+}
+
+.nextDiv {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #1097ff;
+    ;
+    color: #003d6b;
+    border: none;
+    font-size: 14px;
+    margin: 3px;
+    padding: 10px 24px;
+    /*border-radius: 6px;*/
+    transition-duration: 0.4s;
+}
+button:disabled {
+    background-color: #555;
+    ;
+    color: #222;
+}
+
+.resumeButton {
+    background-color: #1097ff;
+    ;
+    color: #003d6b;
+    border: none;
+    font-size: 14px;
+    margin: 3px;
+    padding: 10px 24px;
+    display: none;
+    /*border-radius: 6px;*/
+    transition-duration: 0.4s;
+}
+
+.questionBarTitle {
+    color: #222;
+}
+
+button:focus:enabled, button:hover:enabled {
+    /*box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);*/
+    background-color: #003d6b;
+    color: #a9daff;
+    ;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 4px 1px rgba(0, 0, 0, 0.2), inset 0 3px 2px rgba(255, 255, 255, .22), inset 0 -3px 2px rgba(0, 0, 0, .15), inset 0 20px 10px rgba(255, 255, 255, .12);
+}
+
+button:active:enabled {
+    box-shadow: inset 0 -2px 1px rgba(255, 255, 255, 0.2), inset 0 3px 2px rgba(0, 0, 0, 0.12);
+}
+
+.surveyContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.surveyResult {
+    display: flex;
+    flex-direction: column;
+    page-break-after: always;
+}
+
+.titlebar .title {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12pt;
+    text-align: center;
+    background-color: #004f8b;
+    color: #a9daff!important;
+    padding: 10px;
+    display: inline-block;
+    color-adjust: exact;
+    box-shadow: inset 0 -2px 1px rgba(255, 255, 255, 0.2), inset 0 3px 2px rgba(0, 0, 0, 0.12);
+}
+
+.titlebar {
+    background-color: #a9daff;
+    color: #003d6b;
+    text-align: center;
+}
+
+.grade {
+    text-align: center;
+    width: 90px;
+    font-size: 70pt;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.gradeblock {
+    border-radius: 12px;
+    width: 100px;
+    text-align: center;
+    background-color: rgb(255, 0, 0);
+}
+
+.surveydesc {
+    font-family: Verdana, Geneva, sans-serif;
+    display: inline-block;
+    vertical-align: top;
+    padding: 30px;
+    padding-top: 15px;
+    max-width: calc(100% - 160px);
+    min-width: calc(100% - 160px);
+}
+
+.scores {
+    display: inline-block;
+}
+
+.score {
+    margin-top: 5px;
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 2em;
+    border-radius: 8px;
+    background-color: white;
+}
+
+#controls {
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+}
+
+.resultdetails {
+    font-family: Verdana, Geneva, sans-serif;
+    margin-top: 20px;
+    color: red;
+    background-color: white;
+}
+
+.sectionScoresTitle {}
+
+.sectionScoresContainer {
+    margin-top: 20px;
+}
+
+.sectionScoreBarContainer {
+    width: calc(100% - 278px);
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 3px;
+    text-align: center;
+}
+
+.sectionScoreBarContainerInner {
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 31px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: inset 0 -2px 1px rgba(255, 255, 255, 0.2), inset 0 3px 2px rgba(0, 0, 0, 0.12);
+}
+
+.sectionScoreBarText {
+    position: absolute;
+    padding: 4px;
+    width: 100%;
+    z-index: 100;
+}
+
+.sectionScoreBar {
+    background-color: #a9daff;
+    width: 60%;
+    position: absolute;
+    height: 100%;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 4px 1px rgba(0, 0, 0, 0.2), inset 0 3px 2px rgba(255, 255, 255, .22), inset 0 -3px 2px rgba(0, 0, 0, .15), inset 0 20px 10px rgba(255, 255, 255, .12);
+}
+
+.sectionScoreTitle {
+    display: inline-block;
+    background-color: #1097ff;
+    color: #004f8b;
+    width: 275px;
+    padding: 5px;
+    margin-top: 3px;
+    height: 31px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.sectionScoreTitle:hover {
+    background-color: #003d6b;
+    color: #a9daff;
+    ;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 4px 1px rgba(0, 0, 0, 0.2), inset 0 3px 2px rgba(255, 255, 255, .22), inset 0 -3px 2px rgba(0, 0, 0, .15), inset 0 20px 10px rgba(255, 255, 255, .12);
+}
+
+.sectionScoreContainer {
+    margin-left: 8px;
+    font-family: Verdana, Geneva, sans-serif;
+    color: #222;
+}
+
+.activecap {
+    margin: 4px;
+    margin-left: 8px;
+    background-color: yellow;
+    color: #222;
+    padding: 5px;
+}
+
+.activecaptitle {
+    font-size: 11pt;
+    font-weight: bold;
+}
+
+.activecapdesc {
+    font-size: 10pt;
+}
+
+.answerdetails {
+    font-size: 10pt;
+    color: #444;
+    margin-left: 6px;
+    font-style: italic;
+}
+
+.caphighlight {
+    background-color: yellow;
+}
+
+#surveyKey {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.keytitle {
+    background-color: #004f8b;
+    color: #a9daff!important;
+    border-color: #003d6b;
+    padding: 10px;
+    display: inline-block;
+    color-adjust: exact;
+    box-shadow: inset 0 -2px 1px rgba(255, 255, 255, 0.2), inset 0 3px 2px rgba(0, 0, 0, 0.12);
+}
+
+.keydetails {
+    background-color: #F0FFFF;
+    color: #333;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.surveyKeyContainer {}
+
+/* Customize the label (the container) */
+
+.answerlabel {
+    pointer-events: auto;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    line-height: 19px;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+
+.answerlabel input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 19px;
+    width: 19px;
+    background-color: #a9daff;
+}
+
+/* On mouse-over, add a grey background color */
+
+.answerlabel:focus input~.checkmark {
+    background-color: #004f8b;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 4px 1px rgba(0, 0, 0, 0.2), inset 0 3px 2px rgba(255, 255, 255, .22), inset 0 -3px 2px rgba(0, 0, 0, .15), inset 0 20px 10px rgba(255, 255, 255, .12);
+}
+
+.answerlabel:hover input~.checkmark {
+    background-color: #004f8b;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 4px 1px rgba(0, 0, 0, 0.2), inset 0 3px 2px rgba(255, 255, 255, .22), inset 0 -3px 2px rgba(0, 0, 0, .15), inset 0 20px 10px rgba(255, 255, 255, .12);
+}
+
+/* When the checkbox is checked, add a blue background */
+
+.answerlabel input:checked~.checkmark {
+    background-color: #1097ff;
+    box-shadow: inset 0 -2px 1px rgba(255, 255, 255, 0.2), inset 0 3px 2px rgba(0, 0, 0, 0.12);
+}
+
+.answerlabel:focus input:checked~.checkmark {
+    background-color: #004f8b;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 4px 1px rgba(0, 0, 0, 0.2), inset 0 3px 2px rgba(255, 255, 255, .22), inset 0 -3px 2px rgba(0, 0, 0, .15), inset 0 20px 10px rgba(255, 255, 255, .12);
+}
+
+.answerlabel:hover input:checked~.checkmark {
+    background-color: #004f8b;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 4px 1px rgba(0, 0, 0, 0.2), inset 0 3px 2px rgba(255, 255, 255, .22), inset 0 -3px 2px rgba(0, 0, 0, .15), inset 0 20px 10px rgba(255, 255, 255, .12);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+
+.answerlabel input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+
+.answerlabel .checkmark:after {
+    left: 6px;
+    top: 3px;
+    width: 4px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Style the indicator (dot/circle) */
+
+.answerlabel .radiocheck:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+/* Create a custom radio button */
+
+.radiocheck {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #a9daff;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+
+.answerlabel:hover input~.radiocheck {
+    background-color: #bbb;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 4px 1px rgba(0, 0, 0, 0.2), inset 0 3px 2px rgba(255, 255, 255, .22), inset 0 -3px 2px rgba(0, 0, 0, .15), inset 0 20px 10px rgba(255, 255, 255, .12);
+}
+
+.answerDiv:hover {
+    /**background-color:#a9daff;*/
+}
+
+/* When the radio button is checked, add a blue background */
+
+.answerlabel input:checked~.radiocheck {
+    background-color: #1097ff;
+    box-shadow: inset 0 -2px 1px rgba(255, 255, 255, 0.2), inset 0 3px 2px rgba(0, 0, 0, 0.12);
+}
+
+.answerlabel:hover input:checked~.radiocheck {
+    background-color: #004f8b;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 4px 1px rgba(0, 0, 0, 0.2), inset 0 3px 2px rgba(255, 255, 255, .22), inset 0 -3px 2px rgba(0, 0, 0, .15), inset 0 20px 10px rgba(255, 255, 255, .12);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+
+.radiocheck:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+
+.answerlabel input:checked~.radiocheck:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+
+.answerlabel .radiocheck:after {
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.fade-in {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.6s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1000;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.fileContents {
+    width: 100%;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 9pt;
+}
+
+#countrySelect {
+    width:200px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:14pt;
+    border-color:#a9daff;
+    border-width:1px;
+    border-style:solid;
+    background-color:#a9daff;
+    color:#004f8b
+}
+#affiliationSelect {
+    width:200px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:14pt;
+    border-color:#a9daff;
+    border-width:1px;
+    border-style:solid;
+    background-color:#a9daff;
+    color:#004f8b
+}
+#randomID {
+    width:200px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:14pt;
+    border-color:#a9daff;
+    border-width:1px;
+    border-style:solid;
+    background-color:#a9daff;
+    color:#004f8b;
+}
+#email {
+    width:200px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:12pt;
+    border-color:#a9daff;
+    border-width:1px;
+    border-style:solid;
+    background-color:#a9daff;
+    color:#004f8b;
+}
+#affiliationSelectLabel {
+    width:340px;
+    display:block;
+    margin:0 auto;
+    text-align:right;
+}
+#labelEmail {
+    width:340px;
+    display:block;
+    margin:0 auto;
+    text-align:right;
+}
+#labelRandom {
+    width:340px;
+    margin:0 auto;
+    text-align:right;
+}
+#countrySelectLabel{
+    width:340px;
+    margin:0 auto;
+    text-align:right;
+}
+#saveLabel {
+    display: block;
+}
+#labelRandom {
+    display:block;
+
+}
+#countrySelectLabel {
+    display:block;
+}
+#saveFileName {
+    width: 400px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10pt;
+}
+
+
+#modalDialogAbout>.modal-content>p {
+    text-align: left;
+}
+
+#modalDialogPrivacy>.modal-content>p {
+    text-align: left;
+}
+/* Modal Content/Box */
+
+.modal-content {
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: #fefefe;
+    margin: 10% auto;
+    /* 15% from the top and centered */
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media print {
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+
+/* Dropdown Button */
+
+.dropbtn {
+    background-color: #1097ff;
+    color: #003d6b;
+    padding: 8px;
+    font-size: 8px;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    /*box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);*/
+    background-color: #003d6b;
+    color: #a9daff;
+    ;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 4px 1px rgba(0, 0, 0, 0.2), inset 0 3px 2px rgba(255, 255, 255, .22), inset 0 -3px 2px rgba(0, 0, 0, .15), inset 0 20px 10px rgba(255, 255, 255, .12);
+}
+
+.dropbtn:active {
+    box-shadow: inset 0 -2px 1px rgba(255, 255, 255, 0.2), inset 0 3px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    position: absolute;
+    display: inline-block;
+    right: 10px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    font-family: Verdana, Geneva, sans-serif;
+    display: none;
+    right: 0;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+    background-color: #ddd
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
+.show {
+    display: block;
+    animation: fadeMenu ease 1s;
+    -webkit-animation: fadeMenu ease 1s;
+    -moz-animation: fadeMenu ease 1s;
+    -o-animation: fadeMenu ease 1s;
+    -ms-animation: fadeMenu ease 1s;
+}
+
+@keyframes fadeMenu {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeMenu {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeMenu {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeMenu {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeMenu {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.menuBarLine {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+}
+#loadfileinput {
+    display:none;
+    
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+  color: #a9daff;
+  font-size: 10px;
+  margin: 0 auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 3.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}

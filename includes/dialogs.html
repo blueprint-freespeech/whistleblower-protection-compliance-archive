@@ -1,0 +1,258 @@
+<div id="modalDialog" class="modal fade-in">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" onclick="closeModal();">&times;</span>
+        <p>Previously saved progress has been found. Do you want to:</p>
+
+        <button id="Discard" onclick="discardStored();closeModal();">Discard</button>
+        <button id="Reload" onclick="loadStored();closeModal();">Reload</button>
+    </div>
+
+</div>
+<div id="modalDialogAbout" class="modal fade-in">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>About</h2>
+        <p>This tool has been developed by Blueprint for Free Speech to evaluate the local transposition of Directive (EU) 2019/1937 on the protection of persons who report breaches of Union law (the EU Whistleblowing Directive). The accompanying report Getting Whistleblower Protection Right: A Practical Guide to Transposing the EU Directive can be downloaded from the menu. </p>
+        
+
+        <p>The tool consists of a survey with six groups of questions, which should be completed with reference to an existing law or legislative proposal. Once completed, a score will be calculated, assessing the law on three separate criteria, namely compliance with the Directive, conformity with international standards, and whether the law or proposal forms an adequate response to the issues raised by the COVID-19 pandemic.</p>
+
+        <p>For a detailed explanation of how our scoring works, you can look at our <a href="https://www.blueprintforfreespeech.net/en/compliance-checker-example" target="_blank">worked example.</a>
+        </p>
+
+        
+        <p>The tool will automatically save your progress by storing your answers
+        in your web browser's Local Storage. If you reload the page and a
+        previously stored survey is available you will be given the option to
+        reload and resume.</p>
+        
+        <p>Note that if you are viewing this page in a Private Browsing or
+        Incognito window your progress will not be saved automatically. This
+        is because Local Storage will be cleared by the browser when you close
+        the window.</p>
+        
+        <p>In this case, you can save your progress to an external file by
+        selecting the Save to File option in the dropdown menu. A previously
+        saved survey can be reloaded using the Load from File option.</p>
+        
+        <p>If you wish to clear any stored survey data from your browser select
+        Clear Data from the menu.</p>
+        
+        <p>At the end of the survey you will be given an opportunity to share
+        your responses with Blueprint for Free Speech. This is to help our
+        research into implementation of the EU Directive. You are not obliged
+        to share any data with us and no survey data will uploaded without
+        your express consent. </p>
+
+        <button onclick="closeModal();">Ok</button>
+    </div>
+
+</div>
+
+<div id="modalDialogScoring" class="modal fade-in">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Scoring the Law</h2>
+        
+        <h3>About our scoring</h3>
+        <p  style="text-align: left;">This online tools will help you determine if a draft or actual law complies with the EU Directive protecting whistlelblowers. It may also be helpful to evaluate other laws outside Europe as well against the new European standards brought in by the Directive.</p>
+
+        <p  style="text-align: left;">In the scoring, there are three core parts of the Directive that must be present in order to get a passing score.  Without them, regardless of whether the other sections provide enough points to pass, the proposed law fails to meet the standard. These are:
+            <ol  style="text-align: left;">
+                <li>Fundamental Protections<ul>
+                    <li>It is of critical importance that whistleblower protections cover disclosures that go against the purpose of the law, not just reports about illegal acts. {sec1_cap_1}</li>
+                </ul></li>
+                <li>Reporting Channels<ul>
+                    <li>Whistleblowers must be able to decide to whom they make their disclosure. Mandatory internal reporting essentially constitutes an obstruction of justice and defeats the purpose of whistleblower protections. {sec3_cap_1}</li>
+                </ul></li>
+                <li>Protection from Retaliation<ul>
+                    <li>Reversed burdens of proof make a significant difference to whistleblowers’ ability to access the protections they are entitled to in law. Thus they must be present. {sec4_cap_1} </li>
+                </ul></li>
+
+            </ol>
+        </p>
+
+        <button onclick="closeModal();">Ok</button>
+    </div>
+
+</div>
+
+
+
+<div id="modalDialogSave" class="modal fade-in">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Save Survey to File</h2>
+        <p>Below is the contents of the save file. You can copy and paste this
+            into to a file, or you can click the Save button to save the named
+            file to a location of your choosing. </p>
+        <textarea id="saveFile" rows="5" readonly class="fileContents"></textarea>
+        <label id="saveLabel" for="saveFileName">Filename:<input type="text" id="saveFileName"></input></label>
+        <button onclick="closeModal();">Close</button><button onclick="doSave();closeModal();">Save</button>
+    </div>
+
+</div>
+
+<div id="modalDialogLoad" class="modal fade-in">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Load Saved Survey</h2>
+        <p>Click Open File to select the saved file you wish to load or copy and paste the contents below and click
+            Load Contents:</p>
+        <p style="color:red">Warning: This will overwrite any survey data currently in progress. If you wish to keep
+            such data please Save to File first.</p>
+        <textarea id="loadFile" rows="5" class="fileContents" onkeyup="fileContentsChanged()"></textarea>
+        <input type="file" onchange="checkFile()" id="loadfileinput" accept="application/json" />
+
+        <button onclick="closeModal();">Cancel</button>
+        <button id="loadFileButton" onclick="selectFile();closeModal();">Open File</button>
+    </div>
+
+</div>
+<div id="modalDialogClear" class="modal fade-in">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Clear Browser Data</h2>
+
+        <p>This will clear survey data from your browser. If you wish to keep the data please Save to File first.
+        </p>
+        <button onclick="closeModal();">Cancel</button>
+        <button onclick="discardStored();closeModal();">Clear Data</button>
+    </div>
+
+</div>
+<div id="modalDialogPrivacy" class="modal fade-in">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Privacy Policy</h2>
+
+        <p>Blueprint for Free Speech does not collect any personal information during the usage of this survey. If
+            you are viewing this survey online some web server logs may be created.</p>
+        <p>You can complete this survey offline by downloading the Offline Tool from the website. If working Offline
+            the survey does not make any requests to other servers, unless you choose to submit your results at the
+            end, which is entirely optional</p>
+        <p>If you choose to submit your results at the end we will ask for some additional details to provide
+            context to the results, namely the country they refer to. You will be issued with a random identifier
+            that will be included in your survey results so you can request future deletion if you so choose.</p>
+        <p>If you choose to submit your results the data will be encrypted prior
+            to submission, when it will be sent through a web form to Blueprint
+            for Free Speech. </p>
+        <button onclick="closeModal();">OK</button>
+
+    </div>
+
+</div>
+<div id="modalDialogUpload" class="modal fade-in">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Upload Survey Results</h2>
+
+        <p>By sharing your with Blueprint you make it easier for us to track how governments across Europe are progressing in passing national laws to protect whistleblowers. Below you will see an encrypted copy of your survey results which will be uploaded to Blueprint for Free Speech. We ask you to select which country the survey was completed in regard to and you can include some further information about yourself if you wish. The survey will be submitted via a web form. If you would prefer not to submit via a web form please copy and paste the contents below into an email and send to 
+            <a href="mailto:compliancescore@blueprintforfreespeech.net">compliancescore@blueprintforfreespeech.net</a>.</p>
+
+        <form id="uploadForm" method="POST" onsubmit="return false;">
+            <textarea name="encryptedUpload" id="encryptedUpload" rows="5" class="fileContents"></textarea><br><br>
+            <label for="randomID" id="labelRandom">Unique ID:<input type="text" id="randomID"
+                    name="randomID"></input></label><br>
+            <label for="countrySelect" id="countrySelectLabel">Select Country:<select id="countrySelect"
+                    name="country">
+                    <option value="UNSELECTED">...</option>
+                    <option value="AT">Austria</option>
+                    <option value="BE">Belgium</option>
+                    <option value="BG">Bulgaria</option>
+                    <option value="HR">Croatia</option>
+                    <option value="CY">Cyprus</option>
+                    <option value="CZ">Czechia</option>
+                    <option value="DK">Denmark</option>
+                    <option value="EE">Estonia</option>
+                    <option value="FI">Finland</option>
+                    <option value="FR">France</option>
+                    <option value="DE">Germany</option>
+                    <option value="GR">Greece</option>
+                    <option value="HU">Hungary</option>
+                    <option value="IE">Ireland</option>
+                    <option value="IT">Italy</option>
+                    <option value="LV">Latvia</option>
+                    <option value="LT">Lithuania</option>
+                    <option value="LU">Luxembourg</option>
+                    <option value="MT">Malta</option>
+                    <option value="NL">Netherlands</option>
+                    <option value="PL">Poland</option>
+                    <option value="PT">Portugal</option>
+                    <option value="RO">Romania</option>
+                    <option value="SK">Slovakia</option>
+                    <option value="SI">Slovenia</option>
+                    <option value="ES">Spain</option>
+                    <option value="SE">Sweden</option>
+
+                </select></label><br>
+                <label for="email" id="labelEmail">Email Address:<input type="email" id="email"
+                    name="email"></input></label><br>
+            
+                <label for="affiliationSelect" id="affiliationSelectLabel">Affiliation:<select id="affiliationSelect"
+                    name="affiliation">
+                    <option value="Academic">Academic</option>
+                    <option value="Business">Business</option>
+                    <option value="Civil ociety">Civil society</option>
+                    <option value="Government">Government</option>
+                    <option value="Journalist">Journalist</option>
+                    <option value="Other">Other</option>
+                </select></label><br><br>
+
+            <button id="cancelUpload" onclick="closeModal();">Cancel</button>
+            <button id="uploadButton" onclick="upload();">Upload Results</button>
+            <div id="loaderDiv"></div>
+        </form>
+    </div>
+
+</div>
+<div id="modalDialogGeneric" class="modal fade-in">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="genericModalTitle"></h2>
+
+        <p id="genericModalMsg"></p>
+        <button onclick="closeModal();">Ok</button>
+
+    </div>
+
+</div>
+
+<div id="modalDialogAck" class="modal fade-in">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Acknowledgements</h2>
+        <p>The creators of this online tool thank Professor David Lewis of 
+            Middlesex University, Tom Devine and Samantha Feinstein of the 
+            Government Accountability Project (GAP), as well as legal firm Latham 
+            & Watkins for their valuable insights and reviews.</p>
+        <p>Blueprint for Free Speech gratefully acknowledges the support of the 
+            Open Society Initiative for Europe within the Open Society 
+            Foundations. The Expanding Anonymous Tipping (E.A.T.) Project also 
+            gratefully acknowledges the Internal Security Fund of the European 
+            Union.</p>
+        
+        <button onclick="closeModal();">Ok</button>
+    </div>
+
+</div>

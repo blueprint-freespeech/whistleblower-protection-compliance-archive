@@ -1,0 +1,2092 @@
+var json={
+    "surveys": [
+        {
+            "id": "EUDC",
+            "title": "EU Directive Compliance (EUDC)",
+            "showAsPercent": true,
+            "grade": true,
+            "max": 5.0,
+            "conditionals": [],
+            "grading": [
+                {
+                    "gte": 0,
+                    "lt": 50,
+                    "grade": "F",
+                    "gradeColour": "#FF0000",
+                    "gradeText": "The proposed draft fails to comply with most or all relevant elements outlined in the EU Directive. It does not provide any improvement in the protection of whistleblowers."
+                },
+                {
+                    "gte": 50,
+                    "lt": 60,
+                    "grade": "E",
+                    "gradeColour": "#FFA500",
+                    "gradeText": "The proposed draft fails to meet most relevant elements outlined in the EU Directive. There are significant gaps that need to be addressed to ensure compliance with EU law."
+                },
+                {
+                    "gte": 60,
+                    "lt": 70,
+                    "grade": "D",
+                    "gradeColour": "#00FF00",
+                    "gradeText": "The proposed draft covers few of the elements required by the EU Directive. There are significant gaps that need to be addressed to ensure compliance with EU law. "
+                },
+                {
+                    "gte": 70,
+                    "lt": 80,
+                    "grade": "C",
+                    "gradeColour": "#ADFF2F",
+                    "gradeText": "The proposed draft covers some of the elements required by the EU Directive. Review of the legislative proposal is advised to ensure minimum compliance with EU law."
+                },
+                {
+                    "gte": 80,
+                    "lt": 90,
+                    "grade": "B",
+                    "gradeColour": "#556B2F",
+                    "gradeText": "The proposed draft covers most of the elements required by the EU Directive. Consider review of legislative proposal for full compliance. "
+                },
+                {
+                    "gte": 90,
+                    "lte": 100,
+                    "grade": "A",
+                    "gradeColour": "#D4AF37",
+                    "gradeText": "The highest possible score, indicating full to almost full compliance with the requirements outlined in the EU Directive. "
+                }
+            ]
+        },
+        {
+            "id": "ISC",
+            "title": "International Standards Conformance (ISC)",
+            "showAsPercent": true,
+            "grade": true,
+            "max": 3.0,
+            "conditionals": [
+                {
+                    "surveyId": "EUDC",
+                    "qid": "sec3_q3_ans1",
+                    "eq": 1.0,
+                    "maxAdjust": 1.0
+                },
+                {
+                    "surveyId": "EUDC",
+                    "qid": "sec3_q3_ans2",
+                    "eq": 0.5,
+                    "maxAdjust": 1.0
+                },
+                {
+                    "surveyId": "ISC",
+                    "qid": "sec4_q1_ans1",
+                    "eq": 1.5,
+                    "maxAdjust": 2.0
+                },
+                {
+                    "surveyId": "ISC",
+                    "qid": "sec4_q1_ans2",
+                    "eq": 1.0,
+                    "maxAdjust": 2.0
+                },
+                {
+                    "surveyId": "EUDC",
+                    "qid": "sec4_q3_ans2",
+                    "eq": 1.0,
+                    "maxAdjust": 1.0
+                }
+            ],
+            "grading": [
+                {
+                    "gte": 0,
+                    "lt": 25,
+                    "grade": "N",
+                    "gradeColour": "#FF0000",
+                    "gradeText": "The proposed draft fails to comply with most or all international best practice standards. Even if it complies with the Directive, it may not provide any real improvement in the protection of whistleblowers."
+                },
+                {
+                    "gte": 25,
+                    "lt": 51,
+                    "grade": "C",
+                    "gradeColour": "#ADFF2F",
+                    "gradeText": "The proposed draft covers some of the elements recommended in international best practice standards. Review of the legislative proposal is advised to ensure effective whistleblower protection."
+                },
+                {
+                    "gte": 51,
+                    "lt": 76,
+                    "grade": "B",
+                    "gradeColour": "#556B2F",
+                    "gradeText": "The proposed draft covers most of the elements recommended in international best practice standards. Consider review of the legislative proposal to meet those standards in full."
+                },
+                {
+                    "gte": 76,
+                    "lte": 100,
+                    "grade": "A",
+                    "gradeColour": "#006400",
+                    "gradeText": "The highest possible score, indicating full to almost full compliance with international best practices on whistleblower protection."
+                }
+            ]
+        },
+        {
+            "id": "COVID",
+            "title": "COVID-19 Whistleblower Scenarios",
+            "showAsPercent": true,
+            "grade": true,
+            "max": 3.0,
+            "conditionals": [
+                {
+                    "surveyId": "COVID",
+                    "qid": "sec6_q4",
+                    "eq": 1.0,
+                    "maxAdjust": 1.0
+                },
+                {
+                    "surveyId": "COVID",
+                    "qid": "sec6_q4",
+                    "eq": 0.5,
+                    "maxAdjust": 1.0
+                }
+            ],
+            "grading": [
+                {
+                    "gte": 0,
+                    "lt": 50,
+                    "grade": "F",
+                    "gradeColour": "#FF0000",
+                    "gradeText": "The proposed draft would fail to protect whistleblowers in all or almost all of our scenarios."
+                },
+                {
+                    "gte": 50,
+                    "lt": 60,
+                    "grade": "E",
+                    "gradeColour": "#FFA500",
+                    "gradeText": "The proposed draft would fail to protect whistleblowers in most of our scenarios."
+                },
+                {
+                    "gte": 60,
+                    "lt": 70,
+                    "grade": "D",
+                    "gradeColour": "#00FF00",
+                    "gradeText": "The proposed draft would fail to protect whistleblowers in many of our scenarios."
+                },
+                {
+                    "gte": 70,
+                    "lt": 80,
+                    "grade": "C",
+                    "gradeColour": "#ADFF2F",
+                    "gradeText": "The proposed draft would fail to protect whistleblowers in some of our scenarios."
+                },
+                {
+                    "gte": 80,
+                    "lt": 90,
+                    "grade": "B",
+                    "gradeColour": "#556B2F",
+                    "gradeText": "The proposed draft would fail to protect whistleblowers in most of our scenarios."
+                },
+                {
+                    "gte": 90,
+                    "lte": 100,
+                    "grade": "A",
+                    "gradeColour": "#006400",
+                    "gradeText": "The proposed draft would fail to protect whistleblowers in all, or nearly all, of our scenarios."
+                }
+            ]
+        }
+    ],
+    "sections": [
+        {
+            "id": "sec1",
+            "shorttitle": "What is covered?",
+            "title": "What is covered?",
+            "furtherInfo": "sec1FurtherInfo",
+            "questions": [
+                {
+                    "id": "sec1_q1",
+                    "caps": [],
+                    "appliesTo": "EUDC",
+                    "text": "Is it clear that a whistleblower can make a report about any of the following subjects?",
+                    "type": "multiselect",
+                    "furtherInfo": "",
+                    "feedback":{
+                        "EUDC":"EUDC_fb_sec1_q1",
+                        "ISC":"ISC_fb_sec1_q1",
+                    },
+                    "answers": [
+                        {
+                            "id": "sec1_q1_ans1",
+                            "title": "Public procurement",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans2",
+                            "title": "Financial services",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans3",
+                            "title": "Money laundering",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans3a",
+                            "title": "Terrorist financing",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans4",
+                            "title": "Product safety and compliance",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans5",
+                            "title": "Transport safety",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans6",
+                            "title": "Nuclear safety and radiation protection",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans7",
+                            "title": "Environmental protection",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans7a",
+                            "title": "Food and feed safety",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans8",
+                            "title": "Animal health and welfare",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans9",
+                            "title": "Public health",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans10",
+                            "title": "Data protection",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans11",
+                            "title": "Network security",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans12",
+                            "title": "Misuse of EU funds",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans12a",
+                            "title": "Competition rules",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans13",
+                            "title": "Tax avoidance",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans14",
+                            "title": "Working conditions",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans15",
+                            "title": "Health and safety at work",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans16",
+                            "title": "Education",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans17",
+                            "title": "Policing",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans19",
+                            "title": "Defence",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans20",
+                            "title": "Intelligence",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q1_ans20a",
+                            "title": "Anything else",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec1_q2",
+                    "appliesTo": "EUDC",
+                    "text": "Can a whistleblower report a breach of any of the following?",
+                    "type": "multiselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec1_q2_ans1",
+                            "title": "EU regulations that apply directly on the national level",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q2_ans2",
+                            "title": "National laws or regulations that give effect to EU Directives",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q2_ans3",
+                            "title": "National laws on subjects covered by EU Directives that go beyond what the EU requires",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q2_ans4",
+                            "title": "Other national laws",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q2_ans5",
+                            "title": "Codes of ethics, professional guidelines and other rules of conduct",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q2_ans6",
+                            "title": "Local or regional laws",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q2_ans7",
+                            "title": "International law",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec1_q3",
+                    "caps": [
+                        {
+                            "id": "sec1_cap_1",
+                            "text": "Fundamental Protections",
+                            "desc": "Effective whistleblower protections should cover not only reports about illegal acts, but also those that go against the purpose of the law.",
+                            "appliesTo": "EUDC",
+                            "or": [
+                                {
+                                    "id": "sec1_q3_ans1",
+                                    "eq": "0.0"
+                                },
+                                {
+                                    "id": "sec1_q3_ans2",
+                                    "eq": "0.0"
+                                }
+                            ],
+                            "type": "percent",
+                            "cap": 50
+                        }
+                    ],
+                    "appliesTo": "EUDC",
+                    "text": "Which of the following constitutes a breach?",
+                    "type": "multiselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec1_q3_ans1",
+                            "title": "Illegal acts",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q3_ans2",
+                            "title": "Legal acts that go against the purpose of a law/regulation",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q3_ans3",
+                            "title": "Not complying with the law",
+                            "value": 1.0
+                        },{
+                            "id": "sec1_q3_ans6",
+                            "title": " Mismanagement that undermines an organisation's mission",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q3_ans4",
+                            "title": "Waste or incurring unnecessary costs",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q3_ans5",
+                            "title": "Attempts to conceal any of the above",
+                            "value": 1.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec1_q4",
+                    "caps": [],
+                    "appliesTo": "ISC",
+                    "text": "Can a whistleblower make a report about something that happened in another country?",
+                    "type": "select",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec1_q4_ans1",
+                            "title": "Yes",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec1_q4_ans2",
+                            "title": "No",
+                            "value": 0.0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "sec2",
+            "shorttitle": "Who is covered?",
+            "title": "Who is covered?",
+            "furtherInfo": "sec2FurtherInfo",
+            "questions": [
+                {
+                    "id": "sec2_q1",
+                    "caps": [],
+                    "appliesTo": "EUDC",
+                    "text": "Would any of the following be protected for making a whistleblowing report, regardless of whether they work in the public or private sector?",
+                    "type": "multiselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec2_q1_ans1",
+                            "title": "Employees",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q1_ans3",
+                            "title": "Self-employed contractors",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q1_ans4",
+                            "title": "Shareholders",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q1_ans2",
+                            "title": "Members of an organisation’s supervisory or management body",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q1_ans5",
+                            "title": "Non-executive directors",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q1_ans6",
+                            "title": "Volunteers",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q1_ans7",
+                            "title": "Trainees",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q1_ans8",
+                            "title": "Subcontractors and anyone working under their supervision",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q1_ans9",
+                            "title": "Suppliers and anyone working under their supervision",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q1_ans10",
+                            "title": "Former employees",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q1_ans11",
+                            "title": "People going through a recruitment process",
+                            "value": 1.0
+                        },{
+                            "id": "sec2_q1_ans15",
+                            "title": "Journalists and media organisations",
+                            "value": 1.0
+                        },
+
+
+                        
+                        {
+                            "id": "sec2_q1_ans12",
+                            "title": "Public service users",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q1_ans13",
+                            "title": "Relatives of public service users",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q1_ans14",
+                            "title": "Members of the public",
+                            "superSelect": [
+                                "sec2_q1_ans12",
+                                "sec2_q1_ans13"
+                            ],
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec2_q2",
+                    "caps": [],
+                    "appliesTo": "ISC",
+                    "text": " Does a whistleblower have to be in a working relationship with the subject of their report?",
+                    "type": "select",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec2_q2_ans1",
+                            "title": "Yes",
+                            "value": 0.0
+                        },
+                        {
+                            "id": "sec2_q2_ans2",
+                            "title": "No",
+                            "value": 1.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec2_q3",
+                    "caps": [
+                        {
+                            "id": "sec2_cap_1",
+                            "text": "Tests for Whistleblower motivation",
+                            "desc": "Good faith requirements take the focus away from the content of reports and make it difficult for whistleblowers to access support in practice. ",
+                            "appliesTo": "EUDC",
+                            "or": [
+                                {
+                                    "id": "sec2_q3_ans1",
+                                    "eq": "-1.0"
+                                },
+                                {
+                                    "id": "sec2_q3_ans4",
+                                    "eq": "-1.0"
+                                }
+                            ],
+                            "type": "percent",
+                            "cap": 50
+                        }
+                    ],
+                    "appliesTo": "EUDC",
+                    "text": "Which of the following should be the case in order for a whistleblower to be protected?",
+                    "type": "multiselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec2_q3_ans1",
+                            "title": "They are acting in good faith",
+                            "value": -1.0
+                        },
+                        {
+                            "id": "sec2_q3_ans2",
+                            "title": "Their motive is irrelevant",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q3_ans3",
+                            "title": "They have reasonable grounds to believe the information they are reporting is true",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q3_ans5",
+                            "title": "They have reasonable grounds to believe they are reporting evidence of alleged misconduct",
+                            "value": 1.0
+                        },
+                        
+                        {
+                            "id": "sec2_q3_ans4",
+                            "title": "They can prove their allegations",
+                            "value": -1.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec2_q4",
+                    "caps": [],
+                    "appliesTo": "EUDC",
+                    "text": "Is a whistleblower protected if have to they break the law in order to make their report?",
+                    "type": "select",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec2_q4_ans1",
+                            "title": "Yes",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q4_ans2",
+                            "appliesTo": [
+                                "EUDC",
+                                "ISC"
+                            ],
+                            "title": "No",
+                            "value": 0.0
+                        },
+                        {
+                            "id": "sec2_q4_ans3",
+                            "title": "Partly",
+                            "appliesTo": [
+                                "EUDC",
+                                "ISC"
+                            ],
+                            "value": 0.5
+                        }
+                    ]
+                },
+                {
+                    "id": "sec2_q5",
+                    "caps": [],
+                    "appliesTo": "EUDC",
+                    "text": "Third parties are also involved in the whistleblowing process and can experience retaliation themselves. Are any of the following explicitly granted protection?",
+                    "type": "multiselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec2_q5_ans1",
+                            "title": "Relatives of the reporting person",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q5_ans2",
+                            "title": "Colleagues of the reporting person",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q5_ans3",
+                            "title": "Facilitators assisting in the reporting process",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q5_ans4",
+                            "title": "Legal entities the whistleblower owns or works for",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q5_ans5",
+                            "title": "Media organisations",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q5_ans6",
+                            "title": "Individual journalists",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q5_ans7",
+                            "title": "NGOs",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q5_ans8",
+                            "title": "Community groups",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q5_ans9",
+                            "title": "Professional bodies",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q5_ans10",
+                            "title": "Lawyers",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q5_ans11",
+                            "title": "Trades unions (if they are not also workers)",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec2_q5_ans13",
+                            "title": "Anyone suspected of blowing the whistle",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+
+                        
+                        {
+                            "id": "sec2_q5_ans12",
+                            "title": "Anyone else",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "sec3",
+            "shorttitle": "Reporting Channels",
+            "title": "Reporting Channels",
+            "furtherInfo": "sec3FurtherInfo",
+            "questions": [
+                {
+                    "id": "sec3_q1",
+                    "caps": [
+                        {
+                            "id": "sec3_cap_1",
+                            "text": "Reporting Channels",
+                            "desc": "Whistleblowers must be able to decide who they make their report to. Mandatory internal reporting essentially constitutes an obstruction of justice and defeats the purpose of whistleblower protections.",
+                            "appliesTo": "EUDC",
+                            "or": [
+                                {
+                                    "id": "sec3_q1_ans2",
+                                    "eq": "0.0"
+                                }
+                            ],
+                            "type": "percent",
+                            "cap": 50
+                        }
+                    ],
+                    "appliesTo": "EUDC",
+                    "text": "Can a whistleblower make their first report to any of the following places?",
+                    "type": "multiselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec3_q1_ans1",
+                            "title": "The organisation concerned",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q1_ans2",
+                            "title": "An external regulator competent to hear whistleblower complaints",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q1_ans3",
+                            "title": "Law enforcement",
+                            "applieTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q1_ans4",
+                            "title": "A trade union",
+                            "applieTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q1_ans5",
+                            "title": "A political representative",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q1_ans6",
+                            "title": "A journalist or media organisation",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q1_ans7",
+                            "title": "A civil society organisation",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q1_ans8",
+                            "title": "A dedicated whistleblower authority",
+                            "value": 1.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec3_q2_a",
+                    "caps": [],
+                    "appliesTo": "ISC",
+                    "text": "Do whistleblowers have legal protection if they make a report in the normal course of their work and not through the designated internal channel?",
+                    "type": "select",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec3_q2_a_ans1",
+                            "title": "Yes",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q2_a_ans2",
+                            "title": "No",
+                            "value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec3_q2",
+                    "caps": [],
+                    "appliesTo": "EUDC",
+                    "text": "Which of the following has to provide an internal reporting channel for whistleblower reports?",
+                    "type": "multiselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec3_q2_ans1",
+                            "title": "Private sector organisations employing less than 50 people",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q2_ans2",
+                            "title": "Private sector organisations employing between 50 and 249 people",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q2_ans3",
+                            "title": "Private sector organisations employing 250 people or more",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q2_ans4",
+                            "title": "Public sector organisations employing less than 50 people",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q2_ans5",
+                            "title": "Public sector organisations employing between 50 and 249 people",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q2_ans6",
+                            "title": "Public sector organisations employing 250 people or more",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q2_ans7",
+                            "title": "Non-profit organisations employing less than 50 people",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q2_ans8",
+                            "title": "Non-profit organisations employing between 50 and 249 people",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q2_ans9",
+                            "title": "Non-profit organisations employing 250 people or more",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q2_ans10",
+                            "title": "All organisations in the financial sector, regardless of how many people they employ",
+                            "value": 1.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec3_q3",
+                    "caps": [],
+                    "appliesTo": "EUDC",
+                    "text": "Are private sector organisations allowed to contract third parties to receive and investigate their internal reports? ",
+                    "type": "conditionalselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec3_q3_ans1",
+                            "title": "Yes",
+                            "value": 1.0,
+                            "condQs": [
+                                "sec3_q3_a"
+                            ]
+                        },
+                        {
+                            "id": "sec3_q3_ans2",
+                            "title": "In some circumstances",
+                            "value": 0.5,
+                            "condQs": [
+                                "sec3_q3_b"
+                            ]
+                        },
+                        {
+                            "id": "sec3_q3_ans3",
+                            "title": "No",
+                            "value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec3_q4",
+                    "caps": [],
+                    "appliesTo": "EUDC",
+                    "text": "Do the requirements for internal channels include the following:",
+                    "type": "multiselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec3_q4_ans1",
+                            "title": "Being open to individuals not directly employed by the organisation, such as contractors, volunteers and shareholders",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q4_ans2",
+                            "title": "Receiving and investigating reports being made the responsibility of a specific person or department",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q4_ans3",
+                            "title": "Being designed in a secure way so that reports cannot be accessed by non authorised persons",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q4_ans4",
+                            "title": "Training for those receiving or investigating reports",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q4_ans17",
+                            "title": "Specific protections from retaliation for those receiving or investigating reports",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q4_ans5",
+                            "title": "Reports can be made in writing, by phone or in person",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q4_ans6",
+                            "title": "Reports can be made electronically",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q4_ans7",
+                            "title": "Reports can be made anonymously",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q4_ans8",
+                            "title": "The ability to communicate with a whistleblower after they have made their report",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q4_ans9",
+                            "title": "Acknowledgement of reports within 7 days",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q4_ans10",
+                            "title": "The diligent investigation of reports",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q4_ans11",
+                            "title": "Responding to a report with feedback within 3 months",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q4_ans12",
+                            "title": "Documenting reports so that they can be investigated",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q4_ans13",
+                            "title": "Keeping records of the number of reports received and outcome of investigations",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q4_ans14",
+                            "title": "Providing clear information about how to access relevant external reporting channels",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q4_ans15",
+                            "title": "Allowing the whistleblower access to the investigative file",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q4_ans16",
+                            "title": "Allowing the whistleblower to comment on a draft report ",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec3_q5",
+                    "caps": [],
+                    "appliesTo": "EUDC",
+                    "text": "Do the requirements for external reporting channels include the following:",
+                    "type": "multiselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec3_q5_ans1",
+                            "title": "Authorities operating these channels to be named by government and properly resourced",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q5_ans2",
+                            "title": "Handling and investigating reports being made the responsibility of a specific person or department",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q5_ans3",
+                            "title": "Being designed in a secure way so that reports cannot be accessed by non authorised persons",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q5_ans4",
+                            "title": "Training for those receiving or investigating reports",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q5_ans19",
+                            "title": "Specific protections from retaliation for those receiving or investigating reports",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q5_ans5",
+                            "title": "Reports can be made in writing, by phone or in person",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q5_ans6",
+                            "title": "Reports can be made electronically",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q5_ans7",
+                            "title": "Rules for what happens if a report is received, but not through the regular channel",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q5_ans8",
+                            "title": "Reports can be made anonymously",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q5_ans9",
+                            "title": "The ability to communicate with a whistleblower after they have made their report",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q5_ans10",
+                            "title": "Acknowledgement of reports within 7 days, unless this would put the reporting person at risk",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q5_ans11",
+                            "title": "The diligent investigation of reports",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q5_ans12",
+                            "title": "Obligation to respond to a report and provide feedback within 3 months, or 6 months in \"duly justified\" cases",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q5_ans13",
+                            "title": "Secure storage of reports for the purposes of investigation",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q5_ans14",
+                            "title": "Keeping records of the number of reports received and outcome of investigations",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q5_ans15",
+                            "title": "Providing clear information online about whistleblowers’ legal rights, recourse and the response they can expect",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q5_ans16",
+                            "title": "Receiving and investigating reports being made the responsibility of a specific person or department",
+                            "value": 1.0
+                        },{
+                            "id": "sec3_q5_ans17",
+                            "title": "Allowing the whistleblower access to the investigative file",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q5_ans18",
+                            "title": "Allowing the whistleblower to comment on a draft report ",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec3_q6",
+                    "caps": [],
+                    "appliesTo": "ISC",
+                    "text": "Does a public report have to be made via a journalist?",
+                    "type": "select",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec3_q6_ans1",
+                            "title": "Yes",
+                            "value": 0.0
+                        },
+                        {
+                            "id": "sec3_q6_ans2",
+                            "title": "No",
+                            "value": 1.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec3_q7",
+                    "caps": [],
+                    "appliesTo": "EUDC",
+                    "text": "Is public reporting protected in the following circumstances?",
+                    "type": "multiselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec3_q7_ans1",
+                            "title": "The person has reasonable grounds to believe that the report concerns and immediate and obvious danger to the public interest",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q7_ans2",
+                            "title": "The person has reasonable grounds to believe that it is unlikely the report will be addressed in any other way",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q7_ans3",
+                            "title": "The person has reasonable grounds to believe that using another reporting channel would be likely to result in retaliation",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q7_ans4",
+                            "title": "Other channels were used and the time limit for a response has passed without appropriate action being taken",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q7_ans5",
+                            "title": "The report concerns public health or the environment",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q7_ans6",
+                            "title": "The ability to go to the media is protected under existing national law",
+                            "appliesTo": "EUDC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q7_ans8",
+                            "title": "Public reporting allowed unless the information is marked classified or release is specifically prohibited by statute",
+                            "appliesTo": "EUDC",
+                            "value": 1.0
+                        },
+                        
+                        {
+                            "id": "sec3_q7_ans7",
+                            "title": "Any other circumstance",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        }
+                    ]
+                }
+            ],
+            "conditionalQs": [
+                {
+                    "id": "sec3_q3_a",
+                    "caps": [],
+                    "appliesTo": "ISC",
+                    "text": "Are there minimum requirements for these third parties to avoid conflicts of interest?",
+                    "type": "select",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec3_q3_a_ans1",
+                            "title": "Yes",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q3_a_ans2",
+                            "title": "No",
+                            "value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec3_q3_b",
+                    "caps": [],
+                    "appliesTo": "ISC",
+                    "text": "Are there minimum requirements for these third parties to avoid conflicts of interest?",
+                    "type": "select",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec3_q3_b_ans1",
+                            "title": "Yes",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec3_q3_b_ans2",
+                            "title": "No",
+                            "value": 0.0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "sec4",
+            "shorttitle": "Support and Legal Protections",
+            "title": "Support and Legal Protections",
+            "furtherInfo": "sec4FurtherInfo",
+            "questions": [
+                {
+                    "id": "sec4_q1",
+                    "caps": [],
+                    "appliesTo": "ISC",
+                    "text": "Can whistleblowers make anonymous disclosures?",
+                    "type": "conditionalmultiselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec4_q1_ans1",
+                            "title": "Yes, there is an obligation to provide ways of making anonymous reports",
+                            "condQs": [
+                                "sec4_q1_a"
+                            ],
+                            "value": 1.5
+                        },
+                        {
+                            "id": "sec4_q1_ans2",
+                            "title": "Yes, there is the option of providing ways of making anonymous reports",
+                            "condQs": [
+                                "sec4_q1_b"
+                            ],
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q1_ans4",
+                            "title": "There is an obligation to investigate anonymous reports if received",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q1_ans5",
+                            "title": "Whistleblowers who make a report anonymously are entitled to protection on the same basis as others if their identity becomes known",
+                            "appliesTo": "EUDC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q1_ans6",
+                            "title": "Anonymous reports are not possible",
+                            "appliesTo": "EUDC",
+                            "value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec4_q2",
+                    "caps": [],
+                    "appliesTo": "EUDC",
+                    "text": "Which of the following provisions are included for keeping the identity of a whistleblower confidential?",
+                    "type": "multiselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec4_q2_ans1",
+                            "title": "Only authorised staff should have access to information that identifies a whistleblower",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q2_ans2",
+                            "title": "There are set procedures for what happens if non-authorised staff receive a report",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q2_ans3",
+                            "title": "No personal data is collected or handled unless relevant to handling the report made. Accidentally collected data is to be deleted without undue delay",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q2_ans4",
+                            "title": "Personal data relevant to the report is to be treated in accordance with data protection rules",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q2_ans5",
+                            "title": "There are penalties for individuals or legal entities that breach their duty of confidentiality",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q2_ans6",
+                            "title": "Whistleblowers can make a report without revealing their identity to anyone",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec4_q3",
+                    "caps": [],
+                    "appliesTo": "EUDC",
+                    "text": "Under what circumstances can a whistleblower’s identity be revealed?",
+                    "type": "conditionalmultiselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec4_q3_ans1",
+                            "title": "If they grant their consent",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q3_ans2",
+                            "title": "If it is \"necessary and proportionate\" to do so in the context of an investigation or judicial proceedings, and this is required by EU or national law",
+                            "condQs": [
+                                "sec4_q3_a"
+                            ],
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q3_ans4",
+                            "title": "If written permission has been granted in advance",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q3_ans5",
+                            "title": "If the whistleblower has had the opportunity to challenge the decision",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q3_ans3",
+                            "title": "If original report was anonymous",
+                            "value": -1.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec4_q4",
+                    "caps": [],
+                    "appliesTo": "EUDC",
+                    "text": "Is it clear that the following types of retaliation against a whistleblower are prohibited?",
+                    "type": "multiselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec4_q4_ans1",
+                            "title": "Suspension, lay-off, dismissal or equivalent measures",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q4_ans2",
+                            "title": "Demotion or withholding of promotion",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q4_ans3",
+                            "title": "Change in working conditions, place of work or working hours",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q4_ans4",
+                            "title": "Reduction in salary",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q4_ans5",
+                            "title": "Being given a negative reference",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q4_ans6",
+                            "title": "Negative publicity or posts on social media",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q4_ans7",
+                            "title": "Not being granted a full time or permanent contract",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q4_ans8",
+                            "title": "Early termination, cancellation of contract for goods or services",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q4_ans9",
+                            "title": "Cancellation of licences or permits",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q4_ans10",
+                            "title": "Informal boycotting, or other actions which may make it hard for a reporting person to find new employment",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q4_ans11",
+                            "title": "Harassment, being ostracised or other forms of social retaliation",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q4_ans12",
+                            "title": "Medical or psychological referral",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q4_ans13",
+                            "title": "Domestic legal proceedings",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q4_ans14",
+                            "title": "Extradition to face legal proceedings elsewhere",
+                            "value": 1.0,
+                            "appliesTo": "ISC"
+                        }
+                    ]
+                },
+                {
+                    "id": "sec4_q5",
+                    "caps": [
+                        {
+                            "id": "sec4_cap_1",
+                            "text": "Protection from Retaliation",
+                            "desc": "Reversed burdens of proof make a significant difference to whistleblowers’ ability to access the protections they are entitled to in law",
+                            "appliesTo": "EUDC",
+                            "or": [
+                                {
+                                    "id": "sec4_q5",
+                                    "highlight":"sec4_q5_ans1",
+                                    "eq": "0.0"
+                                }
+                            ],
+                            "type": "percent",
+                            "cap": 50
+                        }
+                    ],
+                    "appliesTo": "EUDC",
+                    "text": "There is an allegation of employer retaliation against a whistleblower, who has already demonstrated that they made a report according to the rules. Whose responsibility it is to prove that the retaliatory action was - or was not – connected to the report?",
+                    "type": "select",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec4_q5_ans1",
+                            "title": "The whistleblower has to show that the action taken against them was a consequence of their report",
+                            "value": 0.0
+                        },
+                        {
+                            "id": "sec4_q5_ans2",
+                            "title": "The person accused of retaliating has to show that the action taken against the whistleblower was not related to their report",
+                            "value": 1.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec4_q6",
+                    "caps": [],
+                    "appliesTo": "EUDC",
+                    "text": "Are penalties established for the following actions?",
+                    "type": "multiselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec4_q6_ans1",
+                            "title": "Retaliating against a whistleblower",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q6_ans2",
+                            "title": "Bringing vexatious legal proceedings against a whistleblower",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q6_ans3",
+                            "title": "Obstructing, or attempting to obstruct a report",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q6_ans4",
+                            "title": "Revealing a whistleblower's identity to a non-authorised person",
+                            "value": 1.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec4_q7",
+                    "caps": [],
+                    "appliesTo": "EUDC",
+                    "text": "Is it clear that whistleblowers' rights cannot be removed or modified in contracts, workplace policies, settlements or non-disclosure agreements?",
+                    "type": "select",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec4_q7_ans1",
+                            "title": "Yes",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q7_ans2",
+                            "title": "No",
+                            "value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec4_q8",
+                    "caps": [],
+                    "appliesTo": "EUDC",
+                    "text": "What kinds of support are whistleblowers entitled to receive?",
+                    "type": "multiselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec4_q8_ans1",
+                            "title": "Free and independent advice on whistleblowing procedures, protections and remedies",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q8_ans2",
+                            "title": "Certification of their status as a whistleblower",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },{
+                            "id": "sec4_q8_ans9",
+                            "title": "Access to a tribunal or administrative process",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },{
+                            "id": "sec4_q8_ans10",
+                            "title": "The possibility of punitive damages",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        
+                        {
+                            "id": "sec4_q8_ans8",
+                            "title": "The ability for whistleblowers to recover legal fees and costs if they prevail",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+
+                        {
+                            "id": "sec4_q8_ans3",
+                            "title": "Legal aid both in criminal and civil proceedings",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q8_ans4",
+                            "title": "Health and psychological support",
+                            "value": 1.0,
+                            "appliesTo": "ISC"
+                        },
+                        {
+                            "id": "sec4_q8_ans5",
+                            "title": "Financial assistance",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q8_ans6",
+                            "title": "Recourse to an independent whistleblowing authority",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q8_ans7",
+                            "title": "Interim relief while their case is being considered",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        }
+                        
+                    ]
+                },
+                {
+                    "id": "sec4_q9",
+                    "caps": [],
+                    "appliesTo": "EUDC",
+                    "text": "How are the rights of the individuals and entities that are the subject of reports protected?",
+                    "type": "multiselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec4_q9_ans1",
+                            "title": "Basic rights to fair procedure are not changed",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q9_ans2",
+                            "title": "Penalties for making knowingly false reports",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q9_ans3",
+                            "title": "Confidentiality rules also apply to those who are the subject of reports",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q9_ans4",
+                            "title": "Identity of those in reports are kept confidential while an investigation is proceeding",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q9_ans5",
+                            "title": "Access to effective remedial measures in cases of false or unjustified reports",
+                            "value": 1.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec4_q10",
+                    "caps": [],
+                    "appliesTo": "ISC",
+                    "text": "Is making a knowingly false report a criminal offence?",
+                    "type": "select",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec4_q10_ans1",
+                            "title": "Yes",
+                            "value": 0.0
+                        },
+                        {
+                            "id": "sec4_q10_ans2",
+                            "title": "No",
+                            "value": 1.0
+                        }
+                    ]
+                }
+            ],
+            "conditionalQs": [
+                {
+                    "id": "sec4_q1_a",
+                    "caps": [],
+                    "appliesTo": "ISC",
+                    "text": "Which channels are covered by the obligation to provide ways of making anonymous reports?",
+                    "type": "select",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec4_q1_a_ans1",
+                            "title": "Internal",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q1_a_ans2",
+                            "title": "External",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q1_a_ans3",
+                            "title": "Both",
+                            "value": 2.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec4_q1_b",
+                    "caps": [],
+                    "appliesTo": "ISC",
+                    "text": "Which channels are covered by the option to provide ways of making anonymous reports?",
+                    "type": "select",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec4_q1_b_ans1",
+                            "title": "Internal",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q1_b_ans2",
+                            "title": "External",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q1_b_ans3",
+                            "title": "Both",
+                            "value": 2.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec4_q3_a",
+                    "caps": [],
+                    "appliesTo": "ISC",
+                    "text": "Where it is \"necessary and proportionate\" to do so in the context of an investigation or judicial proceedings and this is required by EU or national law, are those legal obligations specified?",
+                    "type": "select",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec4_q3_a_ans1",
+                            "title": "Yes",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec4_q3_a_ans2",
+                            "title": "No",
+                            "value": 0.0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "sec5",
+            "shorttitle": "Review and Evaluation",
+            "title": "Review and Evaluation",
+            "furtherInfo": "sec5FurtherInfo",
+            "questions": [
+                {
+                    "id": "sec5_q1",
+                    "caps": [],
+                    "appliesTo": "EUDC",
+                    "text": "Which of the following kinds of information need to be kept by those operating reporting channels for record-keeping purposes?",
+                    "type": "multiselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec5_q1_ans1",
+                            "title": "Records of the original report, in audio recording or minuted form, while investigations are ongoing",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec5_q1_ans2",
+                            "title": "The number of investigations started",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec5_q1_ans3",
+                            "title": "The reason for not launching an investigation",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec5_q1_ans4",
+                            "title": "The outcome of an investigation",
+                            "value": 1.0
+                        },{
+                            "id": "sec5_q1_ans7",
+                            "title": "Any corrective action taken as a result of an investigation",
+                            "value": 1.0
+                        },
+
+                       
+                        {
+                            "id": "sec5_q1_ans5",
+                            "title": "Estimated financial damage related to the subject matter of the report",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec5_q1_ans6",
+                            "title": "Any funds recovered",
+                            "value": 1.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec5_q2",
+                    "caps": [],
+                    "appliesTo": "EUDC",
+                    "text": "Which of the following categories of information should be collated by central government?",
+                    "type": "multiselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec5_q2_ans1",
+                            "title": "The number of reports received by external channels",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec5_q2_ans2",
+                            "title": "The number of investigations launched by external channels",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec5_q2_ans3",
+                            "title": "The reason for not launching an investigation",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec5_q2_ans4",
+                            "title": "Estimated financial damage related to the subject matter of the report",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec5_q2_ans5",
+                            "title": "Total funds recovered",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec5_q2_ans8",
+                            "title": "Any corrective action required as a result of an investigation",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec5_q2_ans6",
+                            "title": "The number of legal proceedings related to reports, including proceedings for retaliation against a whistleblower and any proceedings related to knowingly false reports",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec5_q2_ans7",
+                            "title": "The outcome of any related legal proceedings",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        }
+                    ]
+                },
+                {
+                    "id": "sec5_q3",
+                    "caps": [],
+                    "appliesTo": "EUDC",
+                    "text": "How will we know if the legislation is working?",
+                    "type": "multiselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec5_q3_ans1",
+                            "title": "National statistics are to be provided to the Commission annually",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec5_q3_ans2",
+                            "title": "National authorities are obliged to review external reporting mechanisms at least every three years",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec5_q3_ans3",
+                            "title": "National statistics are to be published annually",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec5_q3_ans4",
+                            "title": "Public authority tasked with conducting regular review of the system",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec5_q3_ans5",
+                            "title": "Regular survey of whistleblower satisfaction with the system",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec5_q3_ans6",
+                            "title": "Implementation of an anonymous complaint mechanism for failures of the system (\"whistleblowing on whistleblowing\")",
+                            "appliesTo": "ISC",
+                            "value": 1.0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "sec6",
+            "shorttitle": "COVID-19 Scenarios",
+            "title": "COVID-19 Scenarios",
+            "furtherInfo": "sec6FurtherInfo",
+            "questions": [
+                {
+                    "id": "sec6_q1",
+                    "caps": [],
+                    "appliesTo": "COVID",
+                    "text": "A care home worker is concerned about inadequate staffing levels at their place of employment, where they are charged with looking after a resident population who are particularly vulnerable to infection with COVID-19. Some have recently arrived after being discharged from hospital.\n\nConcerned about the likely reception from their superiors, the worker makes a report to the industry regulator. Are they protected?",
+                    "type": "select",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec6_q1_ans1",
+                            "title": "Yes",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec6_q1_ans2",
+                            "title": "No",
+                            "value": 0.0
+                        },
+                        {
+                            "id": "sec6_q1_ans3",
+                            "title": "Not sure",
+                            "value": 0.5
+                        }
+                    ]
+                },
+                {
+                    "id": "sec6_q2",
+                    "caps": [],
+                    "appliesTo": "COVID",
+                    "text": "There is a shortage of personal protective equipment in a hospital, meaning that medical staff are having to re-use equipment or improvise with home-made replacements. Knowing that she is also voicing the concerns of many of her colleagues, a nurse posts a video on her social media account where she expresses her fears and frustrations.\n\n Is she protected from retaliation?",
+                    "type": "select",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec6_q2_ans1",
+                            "title": "Yes",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec6_q2_ans2",
+                            "title": "No",
+                            "value": 0.0
+                        },
+                        {
+                            "id": "sec6_q2_ans3",
+                            "title": "Not sure",
+                            "value": 0.5
+                        }
+                    ]
+                },
+                {
+                    "id": "sec6_q3",
+                    "caps": [],
+                    "appliesTo": "COVID",
+                    "text": "If the nurse discusses her plan with a colleague before posting a video, is that colleague also protected?",
+                    "type": "select",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec6_q3_ans1",
+                            "title": "Yes",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec6_q3_ans2",
+                            "title": "No",
+                            "value": 0.0
+                        },
+                        {
+                            "id": "sec6_q3_ans3",
+                            "title": "Not sure",
+                            "value": 0.5
+                        }
+                    ]
+                },
+                {
+                    "id": "sec6_q4",
+                    "caps": [],
+                    "appliesTo": "COVID",
+                    "text": "In circumstances of unprecedented demand, the market for masks, protective aprons and other PPE is fast moving and intensely competitive. A civil servant working in procurement is concerned about decisions made by a senior colleague but is equally worried about being identified.\n\nCan they express their concerns anonymously?",
+                    "type": "conditionalselect",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec6_q4_ans1",
+                            "title": "Yes",
+                            "value": 1.0,
+                            "condQs": [
+                                "sec6_q1_a"
+                            ]
+                        },
+                        {
+                            "id": "sec6_q4_ans2",
+                            "title": "No",
+                            "value": 0.0
+                        },
+                        {
+                            "id": "sec6_q4_ans3",
+                            "title": "Not sure",
+                            "value": 0.5,
+                            "condQs": [
+                                "sec6_q1_a"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "sec6_q5",
+                    "caps": [],
+                    "appliesTo": "COVID",
+                    "text": "A security researcher finds a critical security flaw in a “track and trace” app that allows users to alert others they have come into contact with, if they are diagnosed with COVID-19. The security flaw means that location data relating to a large number of people is easily accessible from the open internet. While it is not well secured, accessing this data would likely breach local computer crimes laws.\n\nIf they reported this security breach, would they be protected?",
+                    "type": "select",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec6_q5_ans1",
+                            "title": "Yes",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec6_q5_ans2",
+                            "title": "No",
+                            "value": 0.0
+                        },
+                        {
+                            "id": "sec6_q5_ans3",
+                            "title": "Not sure",
+                            "value": 0.5
+                        }
+                    ]
+                }
+            ],
+            "conditionalQs": [
+                {
+                    "id": "sec6_q1_a",
+                    "caps": [],
+                    "appliesTo": "COVID",
+                    "text": "Will their report be ignored? ",
+                    "type": "select",
+                    "furtherInfo": "",
+                    "answers": [
+                        {
+                            "id": "sec6_q1_a_ans1",
+                            "title": "Yes",
+                            "value": 0.0
+                        },
+                        {
+                            "id": "sec6_q1_a_ans2",
+                            "title": "No",
+                            "value": 1.0
+                        },
+                        {
+                            "id": "sec6_q1_a_ans3",
+                            "title": "Not sure",
+                            "value": 0.5
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
